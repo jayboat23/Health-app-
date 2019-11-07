@@ -1,0 +1,9 @@
+﻿CREATE TABLE Patients(
+First_Name VARCHAR(20) NOT NULL,
+Last_Name VarCHAR(20) NOT NULL,
+DOB DATE NOT NULL,
+Social_Sercurity int NOT NULL,
+Patient_ID int,
+Employee_ID int FOREIGN KEY REFERENCES HEALTHPROVIDERS(Employee_ID) NOT NULL,
+PRIMARY KEY CLUSTERED ([Patient_ID] Asc),
+);
