@@ -1,0 +1,10 @@
+﻿CREATE TABLE HEALTHPROVIDERS (
+Employee_ID int ,
+Site_ID int NOT NULL,
+Site_Address VARCHAR(1000),
+First_Name VARCHAR(20) NOT NULL,
+Last_Name VARCHAR(20) NOT NULL,
+Login_Name VARCHAR(15) NULL,
+ PRIMARY KEY CLUSTERED ([Employee_ID] Asc)
+
+);
