@@ -1,0 +1,23 @@
+USE [HEALTHAPP]
+GO
+
+/****** Object:  Table [dbo].[HEALTHPROVIDERS]    Script Date: 11/7/2019 5:30:35 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[HEALTHPROVIDERS](
+	[Employee_ID] [int] NOT NULL,
+	[Site_ID] [int] NULL,
+	[Site_Address] [varchar](1) NULL,
+	[First_Name] [varchar](1) NULL,
+	[Last_Name] [varchar](1) NULL,
+	[Login_Name] [varchar](1) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Employee_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
