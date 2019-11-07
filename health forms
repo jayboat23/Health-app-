@@ -1,0 +1,26 @@
+USE [HEALTHAPP]
+GO
+
+/****** Object:  Table [dbo].[HEALTHFORMS]    Script Date: 11/7/2019 5:22:53 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[HEALTHFORMS](
+	[Reason_of_Visit] [varchar](1) NULL,
+	[DATE_OF_VISIT] [timestamp] NOT NULL,
+	[Health_Form_Number] [int] NULL,
+	[Employee_ID] [int] NULL,
+	[Patient_ID] [int] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[HEALTHFORMS]  WITH CHECK ADD FOREIGN KEY([Employee_ID])
+REFERENCES [dbo].[HEALTHPROVIDERS] ([Employee_ID])
+GO
+
+ALTER TABLE [dbo].[HEALTHFORMS]  WITH CHECK ADD FOREIGN KEY([Patient_ID])
+REFERENCES [dbo].[Patients] ([Patient_ID])
+GO
